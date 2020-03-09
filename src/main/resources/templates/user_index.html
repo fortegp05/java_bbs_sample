@@ -3,18 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>サンプル掲示板</title>
+    <title>サンプル掲示板 ユーザー画面</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="js/index.js"></script>
 </head>
 <body>
 
 <header class="Area_header">
     <div class="Area_header_menu">
-        <a href="/user/index">ユーザーログイン</a>
-        　<a href="/admin/index">管理者モード</a>
+        <a href="/user/logout">ログアウト</a>
     </div>
-    サンプル掲示板
+    <p>サンプル掲示板　ユーザー画面</p>
+    <div class="Area_info" th:text="|ログインユーザー名：${user.name}|"></div>
 </header>
 
 <div th:class="'alert ' + *{alert_class}" role="alert"
@@ -30,14 +29,7 @@
 
 <span th:replace="fragments/paging :: fragment-article-paging"></span>
 
-<div class="Area_change_article">
-    <form th:action="@{/}" th:method="get" name="form_change_article">
-        <button type="button"
-                onclick="changeArticleSubmit('update')">編集</button>
-        <button type="button"
-                onclick="changeArticleSubmit('delete')">削除</button>
-    </form>
-</div>
+<div class="border_line"></div>
 
 </body>
 </html>

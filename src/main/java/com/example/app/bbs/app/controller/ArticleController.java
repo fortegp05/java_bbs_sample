@@ -67,7 +67,8 @@ public class ArticleController {
                 articleRequest.getContents(),
                 articleRequest.getArticleKey(),
                 new Date(),
-                new Date()
+                new Date(),
+                null
             )
         );
 

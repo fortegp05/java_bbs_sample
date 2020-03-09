@@ -12,7 +12,8 @@ public class Article {
 
     public Article(int id, String name, String title,
                    String contents, String articleKey,
-                   Date registerAt, Date updateAt
+                   Date registerAt, Date updateAt,
+                   Integer userId
     ) {
         this.id = id;
         this.name = name;
@@ -21,6 +22,7 @@ public class Article {
         this.articleKey = articleKey;
         this.registerAt = registerAt;
         this.updateAt = updateAt;
+        this.userId = userId;
     }
 
     @Id
@@ -35,6 +37,8 @@ public class Article {
     public Date registerAt = new Date();
     @Column(name = "update_at")
     public Date updateAt = new Date();
+    @Column(name = "user_id")
+    Integer userId = null;
 
     public int getId() {
         return id;
@@ -90,5 +94,13 @@ public class Article {
 
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }

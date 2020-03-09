@@ -28,6 +28,12 @@ header.Area_header {
     margin-bottom: 20px;
 }
 
+/* ヘッダーメニュー */
+div.Area_header_menu {
+    text-align: right;
+    font-size: small;
+}
+
 /* 投稿エリア */
 div.Area_register {
     width: 100%;
@@ -105,6 +111,9 @@ table.Area_articles_table tbody tr.Area_article_title label input {
     margin: auto;
 }
 
+tr.Area_article_row_right {
+    text-align: right;
+}
 
 /* 記事の編集削除エリア */
 div.Area_change_article {
@@ -114,6 +123,13 @@ div.Area_change_article {
     margin-bottom: 20px;
 }
 
+/* まとめて削除 */
+div.Area_multi_delete {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 /* ページング */
 div.Area_pager {
